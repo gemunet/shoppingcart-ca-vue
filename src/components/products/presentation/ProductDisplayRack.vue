@@ -58,7 +58,9 @@ export default {
     computed: {
       products() {
         if(this.filter) {
-          return this.totalProducts.filter(p => p.title.toLowerCase().indexOf(this.filter.toLowerCase()) !== -1);
+          return this.totalProducts.filter(p => 
+            p.title.toLowerCase().indexOf(this.filter.toLowerCase()) !== -1 ||
+            p.description.toLowerCase().indexOf(this.filter.toLowerCase()) !== -1);
         } else {
           return this.totalProducts;
         }
