@@ -1,5 +1,5 @@
 <template>
-  <v-row dense>
+  <v-row>
     <v-col cols="12">
       <v-text-field
         v-model="filter"
@@ -10,7 +10,7 @@
         append-icon="mdi-magnify"
       />
     </v-col>
-    <v-col
+    <v-col 
       v-for="item in products"
       :key="item.id"
       cols="12"
